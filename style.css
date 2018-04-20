@@ -26,13 +26,13 @@ body{
   overflow: hidden;
   overflow-y: scroll;
   float: left;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .video-content {
   margin: 10px 0;
 }
 #main-title {
-  font-size: 30px;
+  font-family: 'Arial',sans-serif;
   text-align: center;
   color: #ce1919;
 }
