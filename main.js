@@ -63,7 +63,7 @@ videosList = [
 let index = 0;
 let playing;
 let listNum = videosList.length;
-
+let title = 'https://gdata.youtube.com/feeds/api/videos/(the-video-id)?v=2&alt=json';
 function index_video() {
   if(localStorage.getItem('now-playing')===null){
     playing = videosList[0];
@@ -72,7 +72,7 @@ function index_video() {
   }
   $('#now-playing').attr('src', playing['url']);
   localStorage.setItem('now-playing',JSON.stringify(playing));
-  $('#main-title').append("Now playing video "+ playing['id']);
+  $('#main-title').append(playing['title']);
 }
 function list_video() {
   for(let i = 0; i < listNum; i++) {
@@ -97,7 +97,7 @@ function actionVideo(clickedId) {
   }
   $("#video-list").text("");
   list_video();
-  $('#main-title').text("Now playing video "+playing['id']);
+  $('#main-title').text(playing['title']);
 }
 
 function changeVideo(changeID) {
@@ -106,7 +106,7 @@ function changeVideo(changeID) {
   localStorage.setItem('now-playing',JSON.stringify(playing));
   $("#video-list").text(" ");
   list_video();
-  $('#main-title').text("Now playing video "+playing['id']);
+  $('#main-title').text(playing['title']);
 }
 
 index_video();
