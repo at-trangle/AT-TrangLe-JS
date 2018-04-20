@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise JS 2</title>
+ 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/gif" href="images/icon.jpg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container clearfix">
+    <section class="section-video">
+      <h1 class="video-title" id="main-title"></h1>
+      <div class="video-content">
+        <iframe id="now-playing" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="adjust clearfix">
+        <button class="adj-btn" id="pre-video" onclick="actionVideo(this.id)">Previous</button>
+        <button class="adj-btn" id="next-video" onclick="actionVideo(this.id)">Next</button>
+      </div>
+    </section>
+    <section class="section-list">
+      <ul class="video-list" id="video-list">
+
+      </ul>
+    </section>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
