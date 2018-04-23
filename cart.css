@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+.container {
+  margin: auto;
+}
+header {
+  text-align: center;
+  background: #bf8c8cb0;
+  font-size: 30px;
+}
+.tableSelectProduct{
+  margin: 20px auto;
+  border-collapse: collapse;
+  
+}
+th,
+td {
+  border: 1px solid;
+  width: 200px;
+  text-align: center;
+}
+th {
+  padding: 10px;
+}
+.body_list tr td img {
+  width: 200px;
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    width: 1260px;
+    margin: auto;
+  }
+}
