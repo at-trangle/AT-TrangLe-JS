@@ -141,13 +141,15 @@ function initCart() {
 initCart();
 
 function delProduct(id) {
-  if(confirm('Do you want to delete product '+ arrCart[id]['name'])){
+  if(confirm('Do you want to delete product '+ id)) {
     let newCart = [];
-    for (let i = 0; i < totalCart; i++) {
+    cartLength = arrCart.length;
+    for (let i = 0; i < cartLength; i++) {
       if(parseInt(arrCart[i]['id']) !== parseInt(id)) {
         newCart.push(arrCart[i]);
       } 
     }
+    arrCart = newCart;
     localStorage.setItem('cartList',JSON.stringify(newCart));
     $('.body_list').text('');
     initCart();
