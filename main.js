@@ -60,12 +60,13 @@ productsList = [
     price: '5.291.000 ₫'
   }
 ]
+
 const lengthProductList = productsList.length;
 let arrSelectProduct = [];
 let arrCart = [];
 let cartItem = {};
 let lengthArrCart;
-
+localStorage.setItem('cartList',JSON.stringify(arrCart));
 function loadProduct() {
   arrCart = JSON.parse(localStorage.getItem('cartList'));
   totalCart = arrCart.length;
